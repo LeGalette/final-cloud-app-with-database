@@ -103,6 +103,7 @@ class Question(models.Model):
     grade = models.IntegerField(default = 5)
     # Has question content
     question_content = models.TextField(max_length=500, default="")
+    lesson_id = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     pass
 
     # <HINT> A sample model method to calculate if learner get the score of the question
